@@ -1,6 +1,6 @@
 version : "3.3"
 services :
   web :
-     image : srjcwx/my-note-app:latest
+     image : srjcwx/my-note-app:v1
      ports :
          - "8000:8000"

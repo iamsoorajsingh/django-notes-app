@@ -32,7 +32,7 @@ pipeline {
         }
          stage("delete_old_images") {
             steps {
-               de dockerImages = sh(script: 'docker images --format "{{.ID}}:{{.Repository}}"', returnStdout: true).trim().split('\n')
+               def dockerImages = sh(script: 'docker images --format "{{.ID}}:{{.Repository}}"', returnStdout: true).trim().split('\n')
                 if (dockerImages.size() > 3) {
                         def imagesToDelete = dockerImages[3..-1]
                         

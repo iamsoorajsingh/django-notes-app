@@ -45,7 +45,7 @@ pipeline {
                             echo "Deleted image: $repository"
                         }
                     } else {
-                        echo "No images to delete."
+                        echo "No images to deleted."
                     }
                 }
             }
